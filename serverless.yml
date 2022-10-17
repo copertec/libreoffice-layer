@@ -1,0 +1,17 @@
+frameworkVersion: '3'
+configValidationMode: error
+
+service: libreoffice-layer
+
+provider:
+  name: aws
+  region: us-east-1
+  runtime: nodejs16.x
+
+layers:
+  libreoffice:
+    name: libreoffice
+    package:
+      artifact: layer.tar.br.zip
+    compatibleRuntimes:
+      - nodejs16.x
